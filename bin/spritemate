@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var mate = require('../');
+var argv = require('minimist')(process.argv.slice(2));
+
+if (argv._.length < 2) {
+  console.log('Spritemate 工具提醒您：');
+  console.log('  参数错误');
+  console.log('');
+  console.log('Usage:');
+  console.log('  spritemate icon1.png icon2.png');
+  console.log('  spritemate icon1.png icon2.png -o output.png');
+  process.exit(1);
+}
+
+var images = argv._.map(function (item) {
+  return path.resolve(item);
+});
+var output = path.resolve(argv.o || 'out.png');
+
+mate(images, output, function (err, finalName) {
+  console.log('generate sprite at: ' + path.relative(path.resolve('.'), finalName));
+});

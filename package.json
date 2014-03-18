@@ -1,0 +1,29 @@
+{
+  "name": "spritemate",
+  "version": "0.0.1",
+  "description": "CSS sprite mate",
+  "main": "lib/app.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JacksonTian/spritemate.git"
+  },
+  "keywords": [
+    "CSS",
+    "Sprite"
+  ],
+  "dependencies": {
+    "pngjs": "*",
+    "linked": "0.2.0",
+    "minimist": "*",
+    "pool_stream": "0.0.3"
+  },
+  "author": "JacksonTian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JacksonTian/spritemate/issues"
+  },
+  "homepage": "https://github.com/JacksonTian/spritemate"
+}
