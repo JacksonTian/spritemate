@@ -14,6 +14,10 @@ $ npm install spritemate -g
 $ spritemate example/icon1over.png example/icon2over.png -o example/output.png
 ```
 
+Result:
+
+![](https://raw.github.com/JacksonTian/spritemate/master/example/icon1over.png) + ![](https://raw.github.com/JacksonTian/spritemate/master/example/icon2over.png) = ![](https://raw.github.com/JacksonTian/spritemate/master/example/output_0570030f9f.png)
+
 ## Scripting
 
 ```
