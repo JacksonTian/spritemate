@@ -4,13 +4,13 @@ spritemate
 Sprite Mate
 
 ## Installation
-```
+```bash
 $ npm install spritemate -g
 ```
 
 ## Usage
 
-```
+```bash
 $ spritemate example/icon1over.png example/icon2over.png -o example/output.png
 ```
 
@@ -20,7 +20,7 @@ Result:
 
 ## Scripting
 
-```
+```js
 var mate = require('spritemate');
 
 var images = ['/path/to/image1.png', '/path/to/image2.png'];
