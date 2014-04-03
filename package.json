@@ -1,10 +1,13 @@
 {
   "name": "spritemate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CSS sprite mate",
   "main": "lib/app.js",
   "scripts": {
     "test": "make test"
+  },
+  "bin": {
+    "spritemate": "bin/spritemate"
   },
   "repository": {
     "type": "git",
