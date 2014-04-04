@@ -2,6 +2,7 @@
 
 var path = require('path');
 var mate = require('../');
+var colors = require('colors');
 var argv = require('minimist')(process.argv.slice(2));
 
 if (argv._.length < 2) {
@@ -19,6 +20,23 @@ var images = argv._.map(function (item) {
 });
 var output = path.resolve(argv.o || 'out.png');
 
-mate(images, output, function (err, finalName) {
-  console.log('generate sprite at: ' + path.relative(path.resolve('.'), finalName));
+mate(images, output, function (err, finalName, styles) {
+  console.log('generate sprite at: ' + path.relative(path.resolve('.'), finalName).green);
+  console.log('');
+  console.log('following is styles:');
+  for (var file in styles) {
+    console.log('');
+    console.log(path.relative(path.resolve('.'), file));
+    console.log('');
+    console.log(format(styles[file]).yellow);
+  }
 });
+
+function format(style) {
+  var ret = '{\n';
+  for (var key in style) {
+    ret += '  ' + key + ': ' + style[key] + ';\n';
+  }
+  ret += '}';
+  return ret;
+}

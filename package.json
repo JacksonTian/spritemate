@@ -1,6 +1,6 @@
 {
   "name": "spritemate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CSS sprite mate",
   "main": "lib/app.js",
   "scripts": {
@@ -21,7 +21,8 @@
     "pngjs": "*",
     "linked": "0.2.0",
     "minimist": "*",
-    "pool_stream": "0.0.3"
+    "pool_stream": "0.0.3",
+    "colors": "*"
   },
   "author": "JacksonTian",
   "license": "MIT",
