@@ -1,6 +1,6 @@
 {
   "name": "spritemate",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CSS sprite mate",
   "main": "lib/app.js",
   "scripts": {
