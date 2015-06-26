@@ -20,6 +20,15 @@ var images = argv._.map(function (item) {
 });
 var output = path.resolve(argv.o || 'out.png');
 
+function format(style) {
+  var ret = '{\n';
+  for (var key in style) {
+    ret += '  ' + key + ': ' + style[key] + ';\n';
+  }
+  ret += '}';
+  return ret;
+}
+
 mate(images, output, function (err, finalName, styles) {
   console.log('generate sprite at: ' + path.relative(path.resolve('.'), finalName).green);
   console.log('');
@@ -31,12 +40,3 @@ mate(images, output, function (err, finalName, styles) {
     console.log(format(styles[file]).yellow);
   }
 });
-
-function format(style) {
-  var ret = '{\n';
-  for (var key in style) {
-    ret += '  ' + key + ': ' + style[key] + ';\n';
-  }
-  ret += '}';
-  return ret;
-}

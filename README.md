@@ -36,7 +36,7 @@ example/icon2over.png
 {
   width: 16px;
   height: 26px;
-  background-position: 0 26px;
+  background-position: 0 -26px;
 }
 ```
 
